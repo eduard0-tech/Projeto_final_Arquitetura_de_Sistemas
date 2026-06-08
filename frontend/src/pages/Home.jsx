@@ -20,7 +20,7 @@ function Home() {
     useState("");
 
   async function carregarTarefas() {
-    const response = await api.get("/", {
+    const response = await api.get("/tarefas", {
       params: {
         concluida,
         prioridade,
@@ -31,19 +31,19 @@ function Home() {
   }
 
   async function carregarStats() {
-    const response = await api.get("/stats");
+    const response = await api.get("/tarefas/stats");
     setStats(response.data.dados);
   }
 
   async function criar(dados) {
-    await api.post("/", dados);
+    await api.post("/tarefas", dados);
 
     carregarTarefas();
     carregarStats();
   }
 
   async function atualizar(id, dados) {
-    await api.put(`/${id}`, dados);
+    await api.put(`/tarefas/${id}`, dados);
 
     setTarefaEditando(null);
 
@@ -52,14 +52,14 @@ function Home() {
   }
 
   async function excluir(id) {
-    await api.delete(`/${id}`);
+    await api.delete(`/tarefas/${id}`);
 
     carregarTarefas();
     carregarStats();
   }
 
   async function concluir(id) {
-    await api.patch(`/${id}/concluir`);
+    await api.patch(`/tarefas/${id}/concluir`);
 
     carregarTarefas();
     carregarStats();

@@ -1,0 +1,292 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#f7f9fc;
+  font-family:'Segoe UI',sans-serif;
+  color:#1e293b;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:25px;
+}
+
+/* HEADER */
+
+header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+header h1{
+  font-size:2.2rem;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+header p{
+  color:#64748b;
+  font-size:1rem;
+}
+
+/* STATS */
+
+/* STATS */
+
+.stats{
+  display:flex;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.stat-card{
+  flex:1;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-height:80px;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+
+.stat-icon{
+  width:36px;
+  height:36px;
+
+  border-radius:8px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:16px;
+
+  background:#eef4ff;
+}
+
+.success{
+  background:#ecfdf3;
+}
+
+.warning{
+  background:#fff7ed;
+}
+
+.stat-card h3{
+  font-size:.8rem;
+  color:#64748b;
+  margin-bottom:2px;
+}
+
+.stat-card p{
+  font-size:1.2rem;
+  font-weight:700;
+  margin:0;
+}
+
+.success-text{
+  color:#16a34a;
+}
+
+.warning-text{
+  color:#ea580c;
+}
+/* FORM */
+
+/* FORM */
+
+.form{
+  background:white;
+  border-radius:16px;
+  padding:15px;
+  margin:0 auto 20px;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.form h2{
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+
+.form input,
+.form textarea,
+.form select{
+  width:100%;
+  padding:10px;
+  border:1px solid #dbe2ea;
+  border-radius:8px;
+  margin-bottom:10px;
+  font-size:.95rem;
+}
+
+.form textarea{
+  height:60px;
+  resize:none;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus{
+  outline:none;
+  border-color:#2563eb;
+}
+
+.form button{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#2563eb;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.form button:hover{
+  background:#1d4ed8;
+}
+/* LISTA */
+
+.lista{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/* TAREFAS */
+
+.tarefa{
+  background:white;
+  border-radius:14px;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+  border:1px solid #e5e7eb;
+}
+
+.tarefa h3{
+  font-size:1rem;
+  margin-bottom:6px;
+}
+
+.tarefa p{
+  color:#64748b;
+  margin-bottom:10px;
+  font-size:.9rem;
+}
+
+.done{
+  opacity:.75;
+}
+
+.done h3{
+  text-decoration:line-through;
+}
+
+.prioridade{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:.75rem;
+  font-weight:600;
+}
+
+.prioridade.alta{
+  background:#fee2e2;
+  color:#dc2626;
+}
+
+.prioridade.media{
+  background:#fef3c7;
+  color:#d97706;
+}
+
+.prioridade.baixa{
+  background:#dcfce7;
+  color:#16a34a;
+}
+
+/* AÇÕES */
+
+.acoes{
+  display:flex;
+  gap:8px;
+}
+
+.acoes button{
+  padding:8px 14px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+.acoes button:first-child{
+  background:#2563eb;
+  color:white;
+}
+
+.acoes button:first-child:hover{
+  background:#1d4ed8;
+}
+
+.delete{
+  background:#ef4444 !important;
+  color:white;
+}
+
+.delete:hover{
+  background:#dc2626 !important;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  .stats{
+    flex-direction:column;
+  }
+
+  .tarefa{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .acoes{
+    width:100%;
+  }
+
+  .acoes button{
+    flex:1;
+  }
+}
+
+/* FILTROS */
+
+.filters{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.filters select{
+  padding:10px;
+  border:1px solid #dbe2ea;
+  border-radius:8px;
+  background:white;
+  font-size:.95rem;
+  min-width:180px;
+}
